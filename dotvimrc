@@ -3,7 +3,7 @@
 "Version: 2.0
 "Author: Paul Belanger
 
-set rtp+=~/vimrepo/dotvim
+set rtp+=~/.vimrepo/dotvim
 
 """"Vundle Config""""
 set nocompatible
