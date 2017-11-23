@@ -3,29 +3,24 @@
 "Version: 2.0
 "Author: Paul Belanger
 
-set rtp+=~/.vimrepo/dotvim
+let thisdir = expand("<sfile>:p:h")
+
+exe "set rtp+=" . thisdir . "/dotvim"
 
 """"Vundle Config""""
 set nocompatible
 filetype off
 "set runtime path
-set rtp+=~/vimfiles/bundle/Vundle.vim
-let path='~/vimfiles/bundle'
+"set rtp+=~/.vimrepo/bundle/Vundle.vim
+exe "set rtp+=" . thisdir . "/dotvim/bundle/Vundle.vim"
+let bundle_path = thisdir . '/dotvim/bundle'
 let &shellslash=0
-call vundle#begin(path)
-Plugin 'gmarik/Vundle.vim'
-"Plugin 'Valloric/YouCompleteMe'
-"Plugin 'scrooloose/syntastic'
+call vundle#begin(bundle_path)
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
-"Plugin 'davidhalter/jedi-vim'
-"Plugin 'LaTeX-Box-Team/LaTeX-Box'
-"Plugin 'vim-latex/vim-latex'
-"Plugin 'tomasr/molokai'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin on
