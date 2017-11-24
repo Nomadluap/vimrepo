@@ -77,6 +77,12 @@ set encoding=utf8
 set ffs=unix,dos,mac
 set ff=unix
 
+if has("win32")
+    set clipboard=unnamed
+else
+    set clipboard=unnamedplus
+endif
+
 set expandtab "tabs instead of spaces
 set smarttab "be smart
 set shiftwidth=4
@@ -155,10 +161,6 @@ nnoremap <leader>f za
 
 """"Netrw Settings""""
 let g:netrw_browse_split=3 "<cr> opens files in a new tab
-
-
-
-
 
 """"TagHighlight Settings""""
 nnoremap <leader>hl :silent UpdateTypesFile<cr>
