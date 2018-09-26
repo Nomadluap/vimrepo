@@ -5,6 +5,7 @@
 
 let thisdir = expand("<sfile>:p:h")
 
+" echoerr "dotvim directory is: " . thisdir . "/dotvim"
 exe "set rtp+=" . thisdir . "/dotvim"
 
 """"Vundle Config""""
@@ -176,10 +177,11 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe'
 
 """" Custom filetype config """"
-au filetype tex setlocal shiftwidth=2 tabstop=2 spell
-au filetype lua setlocal shiftwidth=2 tabstop=2
-au filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
-au filetype text setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd filetype tex setlocal shiftwidth=2 tabstop=2 spell
+autocmd filetype lua setlocal shiftwidth=2 tabstop=2
+autocmd filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd filetype text setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd BufReadPost *.glsl set syntax=c
 
 """"Disable Error Bells""""
 set noerrorbells

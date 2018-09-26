@@ -1,3 +1,5 @@
 *.swp
 dotvim/bundle/
+# Dont' ignore the vundle dir
+!dotvim/bundle/Vundle.vim/
 
