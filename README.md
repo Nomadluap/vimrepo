@@ -7,6 +7,6 @@ How to use this vim repo:
      source ~/.vimrepo/dotvimrc
 
 1. Install plugins: vim +PluginInstall +qall
-
+1. Add additional config (such as gui font) to the bottom of `_vimrc`
 
 
