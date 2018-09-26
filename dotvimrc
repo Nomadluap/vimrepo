@@ -106,7 +106,7 @@ if has("gui_running")
     colorscheme default
 
 
-    set guifont=InputMono:h10:cANSI:qDRAFT
+    set guifont=InputMono:h10
     "set guifont=Source_Code_Pro:h10:cANSI
     "set guifont=Consolas:h10
     let &colorcolumn="".join(range(121,9999),",")
@@ -120,7 +120,7 @@ hi ColorColumn guibg=#E0E0E0
 """"Files, Backups, and Undo""""
 set directory=.,$TEMP
 "file encrypting
-set cryptmethod=blowfish
+" set cryptmethod=blowfish
 
 """"Key Remaps""""
 "fast tab switching
@@ -154,7 +154,7 @@ noremap <leader>wR <C-w>R
 "character deletes no longer go into the yank register
 noremap x "_x
 
-inoremap # X#
+" inoremap # X# //inserting hash inserts x# for some reason in qt creator. 
 nnoremap <leader>f za
 
 
@@ -175,8 +175,11 @@ let g:Tex_DefaultTargetFormat='pdf'
 let g:Tex_MultipleCompileFormats='pdf, aux'
 let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe'
 
-au filetype tex set shiftwidth=2 tabstop=2 spell
-au filetype lua set shiftwidth=2 tabstop=2
+"""" Custom filetype config """"
+au filetype tex setlocal shiftwidth=2 tabstop=2 spell
+au filetype lua setlocal shiftwidth=2 tabstop=2
+au filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
+au filetype text setlocal sw=2 ts=2 tw=80 fo+=n
 
 """"Disable Error Bells""""
 set noerrorbells
