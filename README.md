@@ -6,8 +6,10 @@ How to use this vim repo:
 
 3. In your `.vimrc` or `_vimrc` file, add the line: 
      source ~/.vim/vimrc
-4. Add any site-specific configuration to your root .vimrc/_vimrc.
 
+4. Install plugins: vim +PluginInstall +qall
+
+5. Add any site-specific configuration to your root .vimrc/_vimrc.
 
 
 

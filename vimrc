@@ -99,7 +99,7 @@ if has("gui_running")
     set guifont=InputMono:h10
     "set guifont=Source_Code_Pro:h10:cANSI
     "set guifont=Consolas:h10
-    let &colorcolumn="".join(range(121,9999),",")
+    "let &colorcolumn="".join(range(121,9999),",")
     set guioptions-=T
     set guioptions+=e
     set guitablabel=\{%N\}\ %y\ %t%m
@@ -166,11 +166,12 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 let g:Tex_ViewRule_pdf='C:\Program Files (x86)\SumatraPDF\SumatraPDF.exe'
 
 """" Custom filetype config """"
-au filetype tex setlocal shiftwidth=2 tabstop=2 spell
-au filetype lua setlocal shiftwidth=2 tabstop=2
-au filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
-au filetype text setlocal sw=2 ts=2 tw=80 fo+=n
-au filetype markdown setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd filetype tex setlocal shiftwidth=2 tabstop=2 tw=80 spell
+autocmd filetype lua setlocal shiftwidth=2 tabstop=2
+autocmd filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd filetype text setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd filetype markdown setlocal sw=2 ts=2 tw=80 fo+=n
+autocmd BufReadPost *.glsl setlocal syntax=c
 
 """"Disable Error Bells""""
 set noerrorbells
