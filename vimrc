@@ -1,21 +1,11 @@
-"VIM CONFIGURATION
-"Generated: 2014-02-01
-"Version: 2.0
-"Author: Paul Belanger
-
-let thisdir = expand("<sfile>:p:h")
-
-exe "set rtp+=" . thisdir . "/dotvim"
 
 """"Vundle Config""""
 set nocompatible
 filetype off
-"set runtime path
-"set rtp+=~/.vimrepo/bundle/Vundle.vim
-exe "set rtp+=" . thisdir . "/dotvim/bundle/Vundle.vim"
-let bundle_path = thisdir . '/dotvim/bundle'
+
+set rtp+=~/.vim/bundle/Vundle.vim"
 let &shellslash=0
-call vundle#begin(bundle_path)
+call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-surround'
@@ -48,7 +38,7 @@ let mapleader="\<space>"
 let g:mapleader="\<space>"
 set timeoutlen=2000 "set the timeout of the leader to 2 seconds
 "directory for swap files
-set directory=~/vimfiles/swapfiles//
+set directory=~/.vim/swapfiles/
 
 """"User Interface""""
 set wildmenu
@@ -180,6 +170,7 @@ au filetype tex setlocal shiftwidth=2 tabstop=2 spell
 au filetype lua setlocal shiftwidth=2 tabstop=2
 au filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
 au filetype text setlocal sw=2 ts=2 tw=80 fo+=n
+au filetype markdown setlocal sw=2 ts=2 tw=80 fo+=n
 
 """"Disable Error Bells""""
 set noerrorbells

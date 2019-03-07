@@ -1,3 +1,4 @@
 *.swp
-dotvim/bundle/
+bundle/
+swapfiles/
 
