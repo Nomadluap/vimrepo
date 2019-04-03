@@ -178,7 +178,7 @@ autocmd filetype tex setlocal shiftwidth=2 tabstop=2 tw=80 spell
 autocmd filetype lua setlocal shiftwidth=2 tabstop=2
 autocmd filetype rst setlocal sw=2 ts=2 tw=80 fo+=n
 autocmd filetype text setlocal sw=2 ts=2 tw=80 fo+=n
-autocmd filetype markdown setlocal sw=4 ts=4 tw=80 fo+=n
+autocmd filetype markdown setlocal sw=4 ts=4 tw=80 fo+=n comments+=fb::
 autocmd BufReadPost *.glsl setlocal syntax=c
 
 """"Disable Error Bells""""
