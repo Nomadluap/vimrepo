@@ -77,8 +77,16 @@ set expandtab "tabs instead of spaces
 set smarttab "be smart
 set shiftwidth=4
 set tabstop=4
-set ai "auto indent
-set si "smart indent
+set autoindent
+
+set smartindent
+
+
+set cinkeys-=0#
+set indentkeys-=0#
+
+autocmd filetype c cpp setlocal nosmartindent cindent
+
 
 "line wrapping
 set wrap
