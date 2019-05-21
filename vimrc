@@ -85,7 +85,8 @@ set smartindent
 set cinkeys-=0#
 set indentkeys-=0#
 
-autocmd filetype c cpp setlocal nosmartindent cindent
+autocmd filetype c setlocal nosmartindent cindent
+autocmd filetype cpp setlocal nosmartindent cindent
 
 
 "line wrapping
