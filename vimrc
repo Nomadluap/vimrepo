@@ -37,8 +37,6 @@ filetype indent on
 let mapleader="\<space>"
 let g:mapleader="\<space>"
 set timeoutlen=2000 "set the timeout of the leader to 2 seconds
-"directory for swap files
-set directory=~/.vim/swapfiles/
 
 """"User Interface""""
 set wildmenu
@@ -117,7 +115,7 @@ endif
 hi ColorColumn guibg=#E0E0E0
 
 """"Files, Backups, and Undo""""
-set directory=.,$TEMP
+set directory=~/.vim/swapfiles//,$TEMP//
 "file encrypting
 " set cryptmethod=blowfish
 
