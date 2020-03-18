@@ -37,6 +37,8 @@ filetype indent on
 let mapleader="\<space>"
 let g:mapleader="\<space>"
 set timeoutlen=2000 "set the timeout of the leader to 2 seconds
+"directory for swap files
+set directory=~/.vim/swapfiles//
 
 """"User Interface""""
 set wildmenu
