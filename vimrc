@@ -1,9 +1,24 @@
+"Generated: 2014-02-01
+"Version: 2.0
+"Author: Paul Belanger
+
+""""Get the directory that this file is in""""
+set shellslash
+let THISPATH = expand('<sfile>:p:h')
+
+let &rtp.=',' . THISPATH . '/dotvim"'
+set noshellslash
 
 """"Vundle Config""""
 set nocompatible
 filetype off
+"set runtime path
+" set rtp+=~/vimfiles/bundle/Vundle.vim
+" let path='~/vimfiles/bundle
+"
+let &rtp.= "," . THISPATH . '/dotvim/bundle/Vundle.vim'
+let path= THISPATH . '/dotvim/bundle'
 
-set rtp+=~/.vim/bundle/Vundle.vim"
 let &shellslash=0
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -111,6 +126,7 @@ if has("gui_running")
     set guioptions+=e
     set guitablabel=\{%N\}\ %y\ %t%m
     let g:airline#extensions#tabline#enabled=0 "disable the airline-tabline
+    set background=light
 endif
 hi ColorColumn guibg=#E0E0E0
 
