@@ -5,8 +5,9 @@
 """"Get the directory that this file is in""""
 set shellslash
 let THISPATH = expand('<sfile>:p:h')
+"echo 'THISPATH: ' . THISPATH
 
-let &rtp.=',' . THISPATH . '/dotvim"'
+let &rtp.=',' . THISPATH
 set noshellslash
 
 """"Vundle Config""""
@@ -16,8 +17,8 @@ filetype off
 " set rtp+=~/vimfiles/bundle/Vundle.vim
 " let path='~/vimfiles/bundle
 "
-let &rtp.= "," . THISPATH . '/dotvim/bundle/Vundle.vim'
-let path= THISPATH . '/dotvim/bundle'
+let &rtp.= ',' . THISPATH . '/bundle/Vundle.vim'
+let path= THISPATH . '/bundle'
 
 let &shellslash=0
 call vundle#begin()
